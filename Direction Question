@@ -1,0 +1,9 @@
+Arun challenged vijay for a game. The game goes like this, first vijay should stand facing east. then arun will blind fold vijay and ask him to turn to either left(1) or right(-1). arun can say this as many times as possible and finally vijay should predict the direction which he is facing. Write a program to help vijay to predict the direction which he is facing at the end of this game.
+Inputs will be either 1 or -1 until he says 0; 
+Sample Input 1 : 
+1 
+-1 
+-1 
+1
+ 0
+Output 1 : EAST
