@@ -1,0 +1,31 @@
+H - House Hold
+  -    <=50 units  - 1Rs/unit
+  -    51 - 200   - 1.75Rs/unit
+  -    201 - 500  - 2.25Rs/unit
+  -    >500       - 3 Rs/unit
+
+R - Retail Industries
+  -   <75         - 1.23 Rs/unit
+  -   76 - 175    - 2.35 Rs/unit
+  -   176- 450    - 3.00 Rs/unit
+  -   >450        - 3.75 Rs/unit
+
+L - Large Scale Industry
+  -  <150         - 1.80 Rs/unit
+  -  151 - 500    - 4.21 Rs/unit
+  -  501 - 1500   - 7.56 Rs/unit
+  -  >1500        - 13.84 Rs/unit
+
+Discount : 
+   H - 5%
+   R - 7 %
+   L - 12 %
+
+Input : 
+H
+51
+Output : 
+-House Hold Connection-
+Current Bill - Rs. 89.25/-
+Discount - Rs. 4.46/-
+Total Bill - Rs. 84.79/-
