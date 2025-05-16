@@ -1,0 +1,13 @@
+You are helping organize a coding bootcamp. Two workshops are being offered: Data Science and Web Development. The students have registered for these workshops as follows:
+Data Science workshop attendees:
+data_science = {"Alice", "Bob", "Charlie", "Diana", "Ethan"}
+Web Development workshop attendees:
+web_dev = {"Charlie", "Fiona", "George", "Alice", "Hannah"}
+You have been asked to perform the following tasks using Python:
+Find the list of students who are attending both workshops.
+Find the list of students who are attending at least one of the two workshops.
+Find the students who are attending only the Web Development workshop.
+Output : 
+Students attending both workshops: {'Alice', 'Charlie'}
+Students attending at least one workshop: {'Ethan', 'Diana', 'Charlie', 'Fiona', 'Alice', 'George', 'Bob', 'Hannah'}
+Students attending only the Web Development workshop: {'Fiona', 'George', 'Hannah'}
