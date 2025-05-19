@@ -2,19 +2,19 @@ You need to create a base class called Warrior, and then create specific warrior
 
 Requirements
 Base Class: Warrior
-Attributes: name, power, weapon
-Method: attack() – prints a generic attack message.
-Dunder Method: __str__() – returns a formatted string with warrior details.
-Dunder Method: __eq__() – two warriors are considered equal if they have the same power and weapon.
+  Attributes: name, power, weapon
+  Method: attack() – prints a generic attack message.
+  Dunder Method: __str__() – returns a formatted string with warrior details.
+  Dunder Method: __eq__() – two warriors are considered equal if they have the same power and weapon.
 Derived Class: Rama
-Overrides attack() method – specific to Rama’s style (e.g., uses a bow).
-Add a method lead_battle() – prints Rama leading the army.
-Derived Class: Lakshmana
-Overrides attack() method – specific to Lakshmana’s style.
-Add a method protect_rama() – prints Lakshmana protecting Rama.
+  Overrides attack() method – specific to Rama’s style (e.g., uses a bow).
+  Add a method lead_battle() – prints Rama leading the army.
+  Derived Class: Lakshmana
+  Overrides attack() method – specific to Lakshmana’s style.
+  Add a method protect_rama() – prints Lakshmana protecting Rama.
 Derived Class: Hanuman
-Overrides attack() method – specific to Hanuman’s style (e.g., with strength).
-Add a method fly() – prints that Hanuman is flying to Lanka.
+  Overrides attack() method – specific to Hanuman’s style (e.g., with strength).
+  Add a method fly() – prints that Hanuman is flying to Lanka.
 Write a small script to:
 Instantiate each character.
 Print them using print().
@@ -23,19 +23,20 @@ Call their unique methods and overridden attack() methods.In the Ramayan univers
 You need to create a base class called Warrior, and then create specific warrior types such as Rama, Lakshmana, and Hanuman that inherit from it. Implement method overriding and appropriate dunder methods to give the classes rich behavior.
 Requirements
 Base Class: Warrior
-Attributes: name, power, weapon
-Method: attack() – prints a generic attack message.
-Dunder Method: __str__() – returns a formatted string with warrior details.
-Dunder Method: __eq__() – two warriors are considered equal if they have the same power and weapon.
+  Attributes: name, power, weapon
+  Method: attack() – prints a generic attack message.
+  Dunder Method: __str__() – returns a formatted string with warrior details.
+  Dunder Method: __eq__() – two warriors are considered equal if they have the same power and weapon.
 Derived Class: Rama
-Overrides attack() method – specific to Rama’s style (e.g., uses a bow).
-Add a method lead_battle() – prints Rama leading the army.
+  Overrides attack() method – specific to Rama’s style (e.g., uses a bow).
+  Add a method lead_battle() – prints Rama leading the army.
 Derived Class: Lakshmana
-Overrides attack() method – specific to Lakshmana’s style.
-Add a method protect_rama() – prints Lakshmana protecting Rama.
+  Overrides attack() method – specific to Lakshmana’s style.
+  Add a method protect_rama() – prints Lakshmana protecting Rama.
 Derived Class: Hanuman
-Overrides attack() method – specific to Hanuman’s style (e.g., with strength).
-Add a method fly() – prints that Hanuman is flying to Lanka.
+  Overrides attack() method – specific to Hanuman’s style (e.g., with strength).
+  Add a method fly() – prints that Hanuman is flying to Lanka.
+
 
 rama = Rama("Rama", 95, "Bow")
 lakshmana = Lakshmana("Lakshmana", 90, "Sword")
