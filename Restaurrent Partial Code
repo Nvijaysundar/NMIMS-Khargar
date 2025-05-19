@@ -1,0 +1,108 @@
+class User:
+    def __init__(self, username, password):
+        self.username = username
+        self.password = password
+        self.tablenumber = None
+
+
+class Menu:
+    def __init__(self):
+        self.items = {
+            "Pizza": 100,
+            "Burger": 200,
+            "Pasta": 130,
+            "Half Meal": 50
+        }
+
+    def displayMenu(self):
+        print("\tMenu")
+        for item, price in self.items.items():
+            print(f"{item} - {price}")
+        print()
+
+    def getPrice(self, item_name):
+        return self.items.get(item_name, None)
+
+
+class Order:
+    def __init__(self, tablenumber):
+        self.tablenumber = tablenumber
+        self.items = []
+
+    def addItem(self, item_name, quantity):
+        self.items.append((item_name, quantity))
+
+    def showOrder(self):
+        for item, quantity in self.items:
+            print(f"{item} - {quantity}")
+
+    def calculatePrice(self, menu):
+        total = 0
+        for item, qty in self.items:
+            price = menu.getPrice(item)
+            if price:
+                total += price * qty
+            return total
+
+
+class Restaurent:
+    def __init__(self, maxTables=15):
+        self.users = {}
+        self.menu = Menu()
+        self.orders = {}
+        self.tableavailable = set(range(1, maxTables + 1))
+        self.logged_in = None
+
+    def create_account(self, username, password):
+        if username in self.users:
+            print("Username is already Exits")
+        else:
+            self.users[username] = User(username, password)
+            print(f"User: {username} is registered successfully")
+
+    def login(self, username, password):
+        user = self.users.get(username)
+        if user and user.password == password:
+            self.logged_in = user
+            if user.tablenumber is None:
+                if not self.tableavailable:
+                    print("NO Tables available at the moment")
+                    self.logged_in = None
+                    return
+                user.tablenumber = self.tableavailable.pop()
+                print(f"Login SuccessFull Table: {user.tablenumber}")
+            else:
+                print(f"Table is already Assigned. Table number : {user.tablenumber}")
+        else:
+            print("Invalid Password")
+    def placeOrder(self,item_name,qty):
+        if self.logged_in :
+            print("User Not Logged In")
+            return
+        table_number = self.logged_in.tablenumber
+        if item_name not in self.menu.items:
+            print("Item Not Available")
+            return
+        if table_number not in self.orders:
+            self.orders[table_number] = Order(table_number)
+        self.orders[table_number].addItem(item_name,qty)
+    def show_table_order(self):
+        if self.logged_in :
+            print("User Not Logged In")
+            return
+        table_number = self.logged_in.tablenumber
+
+        if table_number in self.orders:
+            order = self.orders(table_number)
+            order.showOrder()
+            total = order.calculatePrice(self.menu)
+            print(f"Total - {total}")
+
+            del self.orders[table_number]
+            self.tableavailable.add(table_number)
+            self.logged_in.tablenumber = None
+        else:
+            print("No Order")
+
+        self.logged_in = None
+
