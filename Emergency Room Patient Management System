@@ -1,0 +1,22 @@
+Emergency Room Patient Management System
+
+Scenario:
+
+You are tasked with designing a system for managing patients in a hospital's Emergency Room (ER). In the ER, patients are not treated in the order they arrive, but rather based on the severity of their condition—more critical patients are treated first. In case multiple patients have the same severity, the one who arrived first should be treated first.
+
+Requirements:
+
+1. Design classes to represent:
+
+    A `Patient` with attributes: `name`, `age`, `condition`, `severity` (an integer from 1 to 10, where 10 is most severe), and `arrivalTime`.
+    A `HospitalER` system that supports the following operations:
+
+      `addPatient(Patient patient)`: Add a new patient to the ER queue.
+      `treatNextPatient()`: Return and remove the next patient to be treated.
+      `peekNextPatient()`: Return (but do not remove) the next patient to be treated.
+
+2. The system should ensure that:
+
+    Patients with higher severity are treated first.
+    If two patients have the same severity, the one who arrived earlier is treated first.
+
